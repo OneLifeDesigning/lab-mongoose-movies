@@ -1,5 +1,5 @@
 // Iteration #1
-require('../configs/db.config')
+require('../config/db.config')
 
 const mongoose = require('mongoose');
 const Celebrity = require('../models/celebrity.model');
