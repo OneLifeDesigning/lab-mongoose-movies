@@ -6,6 +6,8 @@ const celebritiesController = require('../controllers/celebrities.controller');
 router.get('/', (req, res, next) => {
   res.render('index');
 });
-router.get('/celebrities', celebritiesController.all);
+
+router.get('/celebrities', celebritiesController.index);
+router.get('/celebrity/:id', celebritiesController.show);
 
 module.exports = router;
