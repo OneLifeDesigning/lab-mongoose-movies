@@ -1,4 +1,4 @@
-const Celebrity = require('../models/celebrity');
+const Celebrity = require('../models/celebrity.model');
 
 exports.all = (req, res) => {
   Celebrity.find({})

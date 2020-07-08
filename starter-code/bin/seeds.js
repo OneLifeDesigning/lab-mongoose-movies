@@ -2,7 +2,7 @@
 require('../configs/db.config')
 
 const mongoose = require('mongoose');
-const Celebrity = require('../models/celebrity');
+const Celebrity = require('../models/celebrity.model');
 
 const celebrities = [
   { name: 'Nelson Mandela', occupation: 'Lawyer', catchPhrase: 'The greatest glory in living lies not in never falling, but in rising every time we fall.' },
