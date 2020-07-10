@@ -1,5 +1,6 @@
 require('dotenv').config();
 require('./config/db.config')
+require('./config/hbs.config')
 
 const bodyParser   = require('body-parser');
 const cookieParser = require('cookie-parser');
@@ -33,11 +34,9 @@ app.use(require('node-sass-middleware')({
   dest: path.join(__dirname, 'public'),
   sourceMap: true
 }));
-      
 
 
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
-
 
 
 // default value for title local

@@ -1,3 +1,17 @@
-
-<h2>{{ celebrity.name }} <br><em>{{ celebrity.occupation }}</em></h2>
-<p>{{ celebrity.catchPhrase }}</p>
+<div class="container">
+  <div class="row justify-center">
+    <div class="col-12 col-md-9">
+      <blockquote class="blockquote">
+        <h2>{{ celebrity.name }} <br><em>{{ celebrity.occupation }}</em></h2>
+        <p class="mb-0">{{ celebrity.catchPhrase }}</p>
+      </blockquote>
+    </div>
+    <div class="col-12 col-md-3">
+      <a href="/celebrities/" class="btn btn-primary btn-block">View all</a>
+      <a href="/celebrity/{{ celebrity.id }}/edit" class="btn btn-warning btn-block">Edit</a>
+      <form class="mt-2" action="/celebrity/{{ celebrity.id }}/delete" method="POST">
+        <button type="submit" class="btn btn-danger btn-block">Remove</button>
+      </form>
+    </div>
+  </div>
+</div>

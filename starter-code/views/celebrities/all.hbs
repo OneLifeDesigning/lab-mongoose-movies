@@ -1,0 +1,17 @@
+<div class="container">
+  <h2 class="mb-3">{{title}}</h2>
+  <div class="row">
+    {{#each celebrities as |celebrity|}}
+    <div class="col-12 col-md-3">
+      <div class="card border-dark mb-5">
+        <div class="card-body">
+          <p class="mb-0 text-center"><a href="/celebrity/{{ celebrity.id }}">{{ celebrity.name }} <br><small>{{ celebrity.occupation }}</small></a></p>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+    <div class="col-12 col-md-4 offset-md-4">
+      <a href="/celebrities/create" class="btn btn-primary btn-block">Add more</a>
+    </div>
+  </div>
+</div>

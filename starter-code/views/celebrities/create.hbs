@@ -1,0 +1,33 @@
+<div class="container">
+  <h2>{{title}}</h2>
+  <form action="/celebrity{{#if celebrity.id}}/{{celebrity.id}}{{/if}}/save" method="POST">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control{{#if errors.name}} is-invalid{{/if}}" id="name" name="name" {{#if celebrity.name}}value="{{celebrity.name}}" {{/if}}>
+      {{#if errors.name}}
+      <div class="invalid-feedback">
+        {{ errors.name.message}}
+      </div>
+      {{/if}}
+    </div>
+    <div class="form-group">
+      <label for="occupation">Occupation</label>
+      <input type="text" class="form-control{{#if errors.occupation}} is-invalid{{/if}}" id="occupation" name="occupation" {{#if celebrity.occupation}}value="{{celebrity.occupation}}" {{/if}}>
+      {{#if errors.occupation}}
+      <div class="invalid-feedback">
+        {{ errors.occupation.message}}
+      </div>
+      {{/if}}
+    </div>
+    <div class="form-group">
+      <label for="catchPhrase">catchPhrase</label>
+      <input type="text" class="form-control{{#if errors.catchPhrase}} is-invalid{{/if}}" id="catchPhrase" name="catchPhrase" {{#if celebrity.catchPhrase}}value="{{celebrity.catchPhrase}}" {{/if}}>
+      {{#if errors.catchPhrase}}
+      <div class="invalid-feedback">
+        {{ errors.catchPhrase.message}}
+      </div>
+      {{/if}}
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
