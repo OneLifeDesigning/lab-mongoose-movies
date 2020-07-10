@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row justify-center">
+    <div class="col-12 col-md-9">
+      <blockquote class="blockquote">
+        <h2>{{ movie.title }} <br><em>{{ movie.genre }}</em></h2>
+        <p class="mb-0">{{ movie.plot }}</p>
+      </blockquote>
+    </div>
+    <div class="col-12 col-md-3">
+      <a href="/movies/" class="btn btn-primary btn-block">View all</a>
+      <a href="/movie/{{ movie.id }}/edit" class="btn btn-warning btn-block">Edit</a>
+      <form class="mt-2" action="/movie/{{ movie.id }}/delete" method="POST">
+        <button type="submit" class="btn btn-danger btn-block">Remove</button>
+      </form>
+    </div>
+  </div>
+</div>

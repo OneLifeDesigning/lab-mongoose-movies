@@ -1,0 +1,33 @@
+<div class="container">
+  <h2>{{title}}</h2>
+  <form action="/movie{{#if movie.id}}/{{movie.id}}{{/if}}/save" method="POST">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" class="form-control{{#if errors.title}} is-invalid{{/if}}" id="title" name="title" {{#if movie.title}}value="{{movie.title}}" {{/if}}>
+      {{#if errors.title}}
+      <div class="invalid-feedback">
+        {{ errors.title.message}}
+      </div>
+      {{/if}}
+    </div>
+    <div class="form-group">
+      <label for="genre">Genre</label>
+      <input type="text" class="form-control{{#if errors.genre}} is-invalid{{/if}}" id="genre" name="genre" {{#if movie.genre}}value="{{movie.genre}}" {{/if}}>
+      {{#if errors.genre}}
+      <div class="invalid-feedback">
+        {{ errors.genre.message}}
+      </div>
+      {{/if}}
+    </div>
+    <div class="form-group">
+      <label for="plot">Plot</label>
+      <input type="text" class="form-control{{#if errors.plot}} is-invalid{{/if}}" id="plot" name="plot" {{#if movie.plot}}value="{{movie.plot}}" {{/if}}>
+      {{#if errors.plot}}
+      <div class="invalid-feedback">
+        {{ errors.plot.message}}
+      </div>
+      {{/if}}
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
